@@ -11,10 +11,22 @@
   <div class="page__wrapper">
     <header class="page-header">
       <nav class="main-nav">
-        <a href="" class="page-header__logo">
-          <picture>
-            <img src="" alt="" class="page-header__logo--image">
-          </picture>
+        <a class="page-header__logo" href="#">
+          <div class="page-header__logo--picture">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo/logo-pic-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-pic-tablet.svg">
+              <img class="page-header__logo--image" src="img/logo/logo-pic-mobile.svg" width="33" height="38"
+                alt="Логотип Cat Energy">
+            </picture>
+          </div>
+          <div class="page-header__logo--text">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
+              <img class="page-header__logo--image" src="img/logo/logo-text-mobile.svg" width="101" height="18"
+                alt="Название Cat Energy">
+            </picture>
+          </div>
         </a>
         <button class="main-nav__button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -41,7 +53,21 @@
           <h2 class="product__title">Функциональное питание для котов</h2>
           <p class="product__description">Занялся собой? Займись котом!</p>
           <picture>
-            <img class="product__image" src="#" alt="Упаковка питания Cat Energy Pro с куриным вкусом.">
+            <!--
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/main-page-images/index-can-desktop@1x.webp 1x, img/main-page-images/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/main-page-images/index-can-tablet@1x.webp 1x, img/main-page-images/index-can-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/main-page-images/index-can-mobile@1x.webp 1x, img/main-page-images/index-can-mobile@2x.webp 2x">-->
+
+            <source media="(min-width: 1440px)"
+              srcset="img/main-page-images/index-can-desktop@1x.png 1x, img/main-page-images/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/main-page-images/index-can-tablet@1x.png 1x, img/main-page-images/index-can-tablet@2x.png 2x">
+            <img class="product__image" src="img/main-page-images/index-can-mobile@1x.png"
+              srcset="img/main-page-images/index-can-mobile@2x.png 2x" width="280" height="270"
+              alt="Упаковка питания Cat Energy Pro с куриным вкусом.">
           </picture>
           <button class="button product__button">Подобрать программу</button>
         </div>
@@ -137,22 +163,22 @@
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
-          <a href="" class="contacts__logo">
-            <svg class="contacts__logo-image"></svg>
+          <a href="#" class="contacts__logo">
+
           </a>
           <ul class="contacts__social-list social-list">
             <li class="solial-list__item">
-              <a class="solial-list__link" href="">
+              <a class="solial-list__link" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="solial-list__item">
-              <a class="solial-list__link" href="">
+              <a class="solial-list__link" href="#">
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li class="solial-list__item">
-              <a class="solial-list__link" href="">
+              <a class="solial-list__link" href="#">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>

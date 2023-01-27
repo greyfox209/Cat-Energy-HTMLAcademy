@@ -71,12 +71,12 @@ exports.scripts = scripts;
 
 // exports.images = optimizeImages;
 
-// const copyImages = (done) => {
-//   return gulp.src("source/img/**/*.{png,jpg,svg}")
-//     .pipe(gulp.dest("build/img"));
-// }
+const copyImages = (done) => {
+   return gulp.src("source/img/**/*.{png,jpg,svg}")
+     .pipe(gulp.dest("build/img"));
+ }
 
-// exports.images = copyImages;
+ exports.images = copyImages;
 
 //WebP
 
@@ -162,7 +162,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  // copyImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
