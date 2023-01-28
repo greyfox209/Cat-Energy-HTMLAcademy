@@ -78,6 +78,9 @@
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="product-series__link" href="#">
               <span>Каталог Slim</span>
+              <svg class="product-series__icon" width="24" height="12" role="img" aria-label="Маленькая стрелка перехода" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#arrow-short"></use>
+              </svg>
             </a>
           </div>
           <div class="product-series__item">
@@ -86,6 +89,9 @@
               Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="product-series__link" href="#">
               <span>Каталог Pro</span>
+              <svg class="product-series__icon" width="24" height="12" role="img" aria-label="Маленькая стрелка перехода" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#arrow-short"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -164,32 +170,66 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
           <a href="#" class="contacts__logo">
-
+            <svg class="contacts__logo--icon" width="128" height="24" role="img" aria-label="Название Cat Energy" focusable="false">
+              <use xlink:href="img/sprite/sprite.svg#logo-text-mobile"></use>
+            </svg>
           </a>
           <ul class="contacts__social-list social-list">
             <li class="solial-list__item">
               <a class="solial-list__link" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
+                <svg class="solial-list__icon solial-list__icon--vkontakte" width="23" height="13" role="img" aria-label="Иконка ВКонтакте" focusable="false">
+                  <use xlink:href="img/sprite/sprite.svg#icon-vkontakte"></use>
+                </svg>
               </a>
             </li>
             <li class="solial-list__item">
               <a class="solial-list__link" href="#">
                 <span class="visually-hidden">Instagram</span>
+                <svg class="solial-list__icon solial-list__icon--instagram" width="16" height="16" role="img" aria-label="Иконка Instagram" focusable="false">
+                  <use xlink:href="img/sprite/sprite.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
             <li class="solial-list__item">
               <a class="solial-list__link" href="#">
                 <span class="visually-hidden">Facebook</span>
+                <svg class="solial-list__icon solial-list__icon--facebook" width="13" height="20" role="img" aria-label="Иконка Facebook" focusable="false">
+                  <use xlink:href="img/sprite/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
           </ul>
           <a class="contacts__copyright">
             <span class="contacts__copyright-text">HTML Academy</span>
+            <svg class="contacts__copyright-icon" width="27" height="34" role="img" aria-label="Логотип HTMLAcademy" focusable="false">
+              <use xlink:href="img/sprite/sprite.svg#logo-html-academy"></use>
+            </svg>
           </a>
         </div>
       </section>
     </footer>
   </div>
+
+  <!--<script>
+    (function (doc) {
+      var scripts = doc.getElementsByTagName('script')
+      var script = scripts[scripts.length - 1]
+      var xhr = new XMLHttpRequest()
+      xhr.onload = function () {
+        var div = doc.createElement('div')
+        div.innerHTML = this.responseText
+        div.style.display = 'none'
+        script.parentNode.insertBefore(div, script)
+      }
+      xhr.open('get', '/svg/icons.svg', true)
+      xhr.send()
+    })(document)
+  </script>-->
+
+  <!--This has a bug. It will prevent clip-paths from working when using statements.
+  See this stackoverflow question. By changing display: none to width: 0; height: 0 it will work in all cases.-->
+
 </body>
 
 </html>
