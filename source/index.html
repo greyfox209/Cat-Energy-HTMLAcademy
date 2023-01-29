@@ -8,29 +8,29 @@
 </head>
 
 <body class="page__body page__body--wrapper">
-  <header class="page-header">
-    <nav class="main-nav">
-      <a class="page-header__logo" href="#">
-        <div class="page-header__logo--picture">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo/logo-pic-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo/logo-pic-tablet.svg">
-            <img class="page-header__logo--image" src="img/logo/logo-pic-mobile.svg" width="33" height="38"
-              alt="Логотип Cat Energy">
-          </picture>
-        </div>
-        <div class="page-header__logo--text">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
-            <img class="page-header__logo--image" src="img/logo/logo-text-mobile.svg" width="101" height="18"
-              alt="Название Cat Energy">
-          </picture>
-        </div>
-      </a>
-      <button class="main-nav__button">
+  <header class="page-header container">
+    <a class="page-header__logo">
+      <div class="page-header__logo--picture">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo-pic-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-pic-tablet.svg">
+          <img class="page-header__logo--image" src="img/logo/logo-pic-mobile.svg" width="33" height="38"
+            alt="Логотип Cat Energy">
+        </picture>
+      </div>
+      <div class="page-header__logo--text">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
+          <img class="page-header__logo--image" src="img/logo/logo-text-mobile.svg" width="101" height="18"
+            alt="Название Cat Energy">
+        </picture>
+      </div>
+    </a>
+    <nav class="main-nav main-nav--closed">
+      <button class="main-nav__toggle">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <div>
+      <div class="main-nav__block">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--current">Главная</a>
@@ -47,7 +47,7 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Магазин функционального питания для котов Cat Energy.</h1>
-    <section class="product">
+    <section class="product container">
       <div class="product__intro">
         <h2 class="product__title">Функциональное питание для котов</h2>
         <p class="product__description">Занялся собой? Займись котом!</p>
@@ -97,7 +97,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about container">
       <h2 class="about__title">Как это работает</h2>
       <ul class="about__list">
         <li class="about__item">
@@ -114,7 +114,7 @@
         </li>
       </ul>
     </section>
-    <section class="example">
+    <section class="example container">
       <div class="example__wrapper">
         <div class="example__card">
           <h2 class="example__title">Живой пример</h2>
@@ -167,7 +167,7 @@
       </div>
       <div class="location__map"></div>
     </section>
-    <section class="page-footer__contacts contacts">
+    <section class="page-footer__contacts contacts container">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper">
         <a href="#" class="contacts__logo">

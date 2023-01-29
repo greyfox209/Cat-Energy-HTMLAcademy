@@ -1,0 +1,36 @@
+.main-nav {
+  position: relative;
+  display: grid;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: @mobile-width) {
+  .main-nav__toggle {
+    position: relative;
+    justify-self: end;
+    width: 38px;
+    height: 38px;
+    background-color: @white;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .main-nav__toggle::before {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: calc(50% - 4px);
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 -8px 0 0 @black, 0 8px 0 0 @black;
+    content: "";
+  }
+
+  .main-nav__block {
+    display: none;
+  }
+}
