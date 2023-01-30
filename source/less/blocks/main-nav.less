@@ -1,16 +1,35 @@
 .main-nav {
   position: relative;
   display: grid;
-  font-family: "Oswald", "Arial", sans-serif;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-family: "Oswald";
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
+.main-nav__list {
+  background-color: @white;
+}
+
+.main-nav__item {
+  text-align: center;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px;
+  color: @black;
+}
+
 @media (max-width: @mobile-width) {
   .main-nav__toggle {
-    position: relative;
+    position: absolute;
+    top: 12px;
     justify-self: end;
     width: 38px;
     height: 38px;
@@ -19,18 +38,72 @@
     cursor: pointer;
   }
 
-  .main-nav__toggle::before {
+  .main-nav--closed .main-nav__toggle::before {
     position: absolute;
-    top: calc(50% - 2px);
-    left: calc(50% - 4px);
+    top: calc(50% + 2px);
+    left: calc(50% - 5px);
     width: 24px;
     height: 2px;
     background-color: @black;
     box-shadow: 0 -8px 0 0 @black, 0 8px 0 0 @black;
+    transition: all .3s ease-out;
     content: "";
   }
 
-  .main-nav__block {
+  .main-nav--opened .main-nav__toggle {
+    background-color: transparent;
+  }
+
+  .main-nav--opened .main-nav__toggle::before,
+  .main-nav--opened .main-nav__toggle::after {
+    position: absolute;
+    top: calc(50% + 2px);
+    left: calc(50% - 5px);
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    content: "";
+  }
+
+  .main-nav--opened .main-nav__toggle::before {
+    transform: rotate(45deg);
+  }
+
+  .main-nav--opened .main-nav__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  .main-nav--closed .main-nav__list {
     display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    top: 66px;
+    left: -20px;
+    display: block;
+    width: calc(40px + 100%);
+  }
+
+  .main-nav__item {
+    border-top: 1px solid @grey200;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex: 1 1 auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: flex-end;
   }
 }

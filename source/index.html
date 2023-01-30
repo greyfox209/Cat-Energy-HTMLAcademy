@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body class="page__body page__body--wrapper">
@@ -30,19 +33,17 @@
       <button class="main-nav__toggle">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <div class="main-nav__block">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current">Главная Main</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="page-main">
@@ -216,6 +217,7 @@
     </section>
   </footer>
 
+  <script src="js/navigation.js"></script>
   <!--<script>
     (function (doc) {
       var scripts = doc.getElementsByTagName('script')
