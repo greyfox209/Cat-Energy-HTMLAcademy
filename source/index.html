@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=fallback" rel="stylesheet">
+  <link rel="preload" href="/fonts/oswaldregular.woff" as="font">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
 </head>
 
 <body class="page__body page__body--wrapper">
@@ -24,7 +28,7 @@
       <div class="page-header__logo--text">
         <picture>
           <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
-          <img class="page-header__logo--image" src="img/logo/logo-text-mobile.svg" width="101" height="18"
+          <img class="page-header__logo--image-text" src="img/logo/logo-text-mobile.svg" width="101" height="18"
             alt="Название Cat Energy">
         </picture>
       </div>
@@ -35,7 +39,7 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current">Главная Main</a>
+          <a class="main-nav__link main-nav__link--current">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
