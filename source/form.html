@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body page__body--wrapper">
-  <header class="page-header container">
+  <header class="page-header">
     <a class="page-header__logo">
       <div class="page-header__logo--picture">
         <picture>
@@ -54,14 +54,14 @@
   <main class="page-main container">
     <div class="page-main__intro">
       <h1 class="page-main__title">Подбор программы</h1>
-      <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="page-main__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
     </div>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru">
       <fieldset class="form__item form__item--cat-description">
         <h2 class="visually-hidden">Описание питомца:</h2>
         <div class="form__field field">
-          <label class="field__label" for="">Имя:*</label>
-          <input class="field__input" type="text" placeholder="Барсик">
+          <label class="field__label" for="name">Имя:*</label>
+          <input class="field__input" type="text" id="name" name="name" placeholder="Барсик">
         </div>
         <div class="form__field field">
           <label class="field__label" for="">Вес (кг):*</label>
@@ -90,35 +90,30 @@
         </ul>
       </fieldset>
       <fieldset class="form__item form__item--owner-contacts">
-        <h2 class="form__subtitle">Контактные данные (владельца кота)</h2>
+        <h2 class="form__subtitle form__subtitle--owner-contacts">Контактные данные (владельца кота)</h2>
         <div class="form__field field">
           <label class="field__label" for="">E-mail:*</label>
-          <div>
-            <input class="field__input" type="text" placeholder="kuklachev@gmail.com">
-            <svg class="field__icon field__icon--mail" width="19" height="14" role="img" aria-label="Иконка почты"
-              focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#mail-icon"></use>
-            </svg>
-          </div>
+          <input class="field__input" type="text" placeholder="kuklachev@gmail.com">
+          <svg class="field__icon field__icon--mail" width="19" height="14" role="img" aria-label="Иконка почты"
+            focusable="false">
+            <use xlink:href="img/sprite/sprite.svg#mail-icon"></use>
+          </svg>
         </div>
         <div class="form__field field">
           <label class="field__label" for="">Телефон:*</label>
-          <div>
-            <input class="field__input" type="text" placeholder="8 (960) 900-60-90">
-            <svg class="field__icon field__icon--phone" width="20" height="20" role="img" aria-label="Иконка телефона"
-              focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#phone-icon"></use>
-            </svg>
-          </div>
+          <input class="field__input" type="text" placeholder="8 (960) 900-60-90">
+          <svg class="field__icon field__icon--phone" width="20" height="20" role="img" aria-label="Иконка телефона"
+            focusable="false">
+            <use xlink:href="img/sprite/sprite.svg#phone-icon"></use>
         </div>
       </fieldset>
       <fieldset class="form__item form__item--comment">
-        <h2 class="form__subtitle">Комментарий</h2>
+        <h2 class="form__subtitle form__subtitle--comment">Комментарий</h2>
         <textarea class="form__textarea" name="text" id="" cols="30" rows="10"
           placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
       <fieldset class="form__item form__item--add-info">
-        <h2 class="form__subtitle">Дополнительно</h2>
+        <h2 class="form__subtitle form__subtitle--add-info">Дополнительно</h2>
         <ul class="form__list checkbox">
           <li class="checkbox__item">
             <input class="checkbox__input visually-hidden" type="checkbox">
