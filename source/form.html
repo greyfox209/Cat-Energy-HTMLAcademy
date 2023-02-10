@@ -64,28 +64,31 @@
           <input class="field__input" type="text" id="name" name="name" placeholder="Барсик">
         </div>
         <div class="form__field field">
-          <label class="field__label" for="">Вес (кг):*</label>
-          <input class="field__input" type="text" placeholder="7">
+          <label class="field__label" for="weight">Вес (кг):*</label>
+          <input class="field__input" type="text" id="weight" name="weight" placeholder="7">
         </div>
         <div class="form__field field">
-          <label class="field__label" for="">Возраст (лет):</label>
-          <input class="field__input" type="text" placeholder="7">
+          <label class="field__label" for="age">Возраст (лет):</label>
+          <input class="field__input" type="text" id="age" name="age" placeholder="7">
         </div>
       </fieldset>
       <fieldset class="form__item form__item--program-type">
         <h2 class="visually-hidden">Тип программы:</h2>
         <ul class="form__list radio">
           <li class="radio__item">
-            <input class="radio__input visually-hidden" type="radio">
-            <label class="radio__label" for="">Похудение</label>
+            <input class="radio__input visually-hidden" type="radio" checked name="program-type" value="weight-loss"
+              id="weight-loss">
+            <label class="radio__label" for="weight-loss">Похудение</label>
           </li>
           <li class="radio__item">
-            <input class="radio__input visually-hidden" type="radio">
-            <label class="radio__label" for="">Набор массы</label>
+            <input class="radio__input visually-hidden" type="radio" name="program-type" value="weight-gain"
+            id="weight-gain">
+            <label class="radio__label" for="weight-gain">Набор массы</label>
           </li>
           <li class="radio__item">
-            <input class="radio__input visually-hidden" type="radio">
-            <label class="radio__label" for="">Не знаю (Нужен ваш совет)</label>
+            <input class="radio__input visually-hidden" type="radio" name="program-type" value="do-not-know"
+            id="do-not-know">
+            <label class="radio__label" for="do-not-know">Не знаю (Нужен ваш совет)</label>
           </li>
         </ul>
       </fieldset>

@@ -35,7 +35,21 @@
 }
 
 .form__item--program-type {
-  margin-bottom: 20px;
+  position: relative;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+}
+
+.form__item--program-type::before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  height: 100%;
+  border-top: 1px solid @light-grey-600;
+  border-bottom: 1px solid @light-grey-600;
+  content: "";
 }
 
 .form__item--owner-contacts {
