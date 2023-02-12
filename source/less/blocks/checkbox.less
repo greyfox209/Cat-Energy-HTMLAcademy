@@ -1,17 +1,17 @@
-.radio__item:not(:last-child) {
+.checkbox__item:not(:last-child) {
   margin-bottom: 13px;
 }
 
-.radio__label {
+.checkbox__label {
   position: relative;
   display: flex;
   align-items: center;
   min-height: 30px;
-  padding-left: 45px;
+  padding-left: 46px;
   cursor: pointer;
 }
 
-.radio__label::before {
+.checkbox__label::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,17 +19,16 @@
   height: 30px;
   outline: 1px solid @light-grey-700;
   outline-offset: -1px;
-  border-radius: 50%;
   content: "";
 }
 
-.radio__input:checked + .radio__label::after {
+.checkbox__input:checked + .checkbox__label::after {
   position: absolute;
   top: 8px;
-  left: 8px;
-  width: 14px;
+  left: 6px;
+  width: 18px;
   height: 14px;
-  background-color: @green;
-  border-radius: 50%;
+  background-image: url("../img/tick-icon.svg");
+  background-repeat: no-repeat;
   content: "";
 }

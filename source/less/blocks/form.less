@@ -18,6 +18,22 @@
   color: @black;
 }
 
+.form__subtitle--text {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.form__subtitle--text::before {
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  height: 100%;
+  background-color: @white;
+  z-index: -1;
+  content: "";
+}
+
 .form__subtitle--owner-contacts {
   margin-bottom: 35px;
 }
@@ -44,8 +60,8 @@
 .form__item--program-type::before {
   position: absolute;
   top: 0;
-  left: -20px;
-  right: -20px;
+  left: 0;
+  right: 0;
   height: 100%;
   border-top: 1px solid @light-grey-600;
   border-bottom: 1px solid @light-grey-600;
@@ -62,4 +78,64 @@
 
 .form__item--add-info {
   margin-bottom: 34px;
+}
+
+.form__item--owner-contacts,
+.form__item--comment,
+.form__item--add-info {
+  position: relative;
+}
+
+.form__item--owner-contacts::after,
+.form__item--comment::after,
+.form__item--add-info::after {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 2px solid @green;
+  z-index: -1;
+  content: "";
+}
+
+.form__textarea {
+  padding: 9px 12px 10px 15px;
+  width: 100%;
+  min-height: 150px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @dark-grey-100;
+  border: 0;
+  outline: 1px solid @light-grey-400;
+  outline-offset: -1px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button {
+  margin-bottom: 21px;
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form__note {
+  display: block;
+  text-align: center;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  color: @black;
 }
