@@ -60,8 +60,8 @@
 .form__item--program-type::before {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -20px;
+  right: -20px;
   height: 100%;
   border-top: 1px solid @light-grey-600;
   border-bottom: 1px solid @light-grey-600;
@@ -100,6 +100,7 @@
 }
 
 .form__textarea {
+  display: block;
   padding: 9px 12px 10px 15px;
   width: 100%;
   min-height: 150px;
@@ -138,4 +139,108 @@
   line-height: 16px;
   text-transform: none;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    margin-bottom: 72px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__subtitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__subtitle--text::before {
+    left: -40px;
+    right: -40px;
+  }
+
+  .form__subtitle--text-wrap {
+    display: none;
+  }
+
+  .form__subtitle--owner-contacts {
+    margin-bottom: 76px;
+  }
+
+  .form__subtitle--comment {
+    margin-bottom: 76px;
+  }
+
+  .form__subtitle--add-info {
+    margin-bottom: 57px;
+  }
+
+  .form__item--cat-description {
+    margin-bottom: 72px;
+  }
+
+  .form__item--program-type {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-bottom: 75px;
+  }
+
+  .form__item--program-type::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid @light-grey-600;
+  }
+
+  .form__item--owner-contacts {
+    margin-bottom: 65px;
+  }
+
+  .form__item--comment {
+    margin-bottom: 65px;
+  }
+
+  .form__item--add-info {
+    margin-bottom: 20px;
+  }
+
+  .form__item--owner-contacts::after,
+  .form__item--comment::after,
+  .form__item--add-info::after {
+    top: 22px;
+  }
+
+  .form__textarea {
+    padding: 10px 19px 10px 19px;
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form__button {
+    margin-bottom: 0;
+    margin-right: 61px;
+    padding: 13px 13px;
+    width: 282px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .form__note {
+    display: block;
+    text-align: center;
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: none;
+    color: @black;
+  }
 }

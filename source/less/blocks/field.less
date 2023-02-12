@@ -15,10 +15,10 @@
 
 .field__input {
   flex: 1 1 auto;
-  padding-top: 13px;
-  padding-bottom: 15px;
-  padding-left: 14px;
+  padding-top: 14px;
   padding-bottom: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -65,4 +65,33 @@
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color:    @dark-grey-100;
+}
+
+@media (min-width: @tablet-width) {
+  .field:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .field__label {
+    margin-right: 18px;
+  }
+
+  .field__input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .field__icon--mail {
+    top: 19px;
+    right: 19px;
+  }
+
+  .field__icon--phone {
+    top: 16px;
+    right: 17px;
+  }
 }

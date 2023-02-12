@@ -8,6 +8,7 @@
   align-items: center;
   min-height: 30px;
   padding-left: 46px;
+  color: @black;
   cursor: pointer;
 }
 
@@ -31,4 +32,35 @@
   background-image: url("../img/tick-icon.svg");
   background-repeat: no-repeat;
   content: "";
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+  }
+
+  .checkbox__item {
+    min-width: 221px;
+  }
+
+  .checkbox__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .checkbox__label {
+    min-height: 40px;
+    padding-left: 59px;
+  }
+
+  .checkbox__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .checkbox__input:checked + .checkbox__label::after {
+    top: 13px;
+    left: 11px;
+  }
 }

@@ -52,13 +52,13 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__intro container">
+    <div class="page-main__intro container container--form">
       <h1 class="page-main__title">Подбор программы</h1>
       <p class="page-main__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
     </div>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru">
-      <fieldset class="form__item form__item--cat-description">
-        <div class="container">
+      <div class="container container--form">
+        <fieldset class="form__item form__item--cat-description">
           <h2 class="visually-hidden">Описание питомца:</h2>
           <div class="form__field field">
             <label class="field__label" for="name">Имя:*</label>
@@ -72,10 +72,8 @@
             <label class="field__label" for="age">Возраст (лет):</label>
             <input class="field__input" type="text" id="age" name="age" placeholder="7">
           </div>
-        </div>
-      </fieldset>
-      <fieldset class="form__item form__item--program-type">
-        <div class="container">
+        </fieldset>
+        <fieldset class="form__item form__item--program-type">
           <h2 class="visually-hidden">Тип программы:</h2>
           <ul class="form__list radio">
             <li class="radio__item">
@@ -94,12 +92,12 @@
               <label class="radio__label" for="do-not-know">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
       <fieldset class="form__item form__item--owner-contacts">
-        <div class="container">
+        <div class="container container--form">
           <h2 class="form__subtitle form__subtitle--owner-contacts">
-            <span class="form__subtitle--text">Контактные данные <br class="form__subtitle--text-wrap">(владельца
+            <span class="form__subtitle--text">Контактные данные&nbsp;<br class="form__subtitle--text-wrap">(владельца
               кота)</span>
           </h2>
           <div class="form__field field">
@@ -122,16 +120,16 @@
         </div>
       </fieldset>
       <fieldset class="form__item form__item--comment">
-        <div class="container">
+        <div class="container container--form">
           <h2 class="form__subtitle form__subtitle--comment">
             <span class="form__subtitle--text">Комментарий</span>
           </h2>
-          <textarea class="form__textarea" name="text" id="" cols="30" rows="10"
+          <textarea class="form__textarea" name="text" id="text"
             placeholder="Расскажите обо всех повАдках кота"></textarea>
         </div>
       </fieldset>
       <fieldset class="form__item form__item--add-info">
-        <div class="container">
+        <div class="container container--form">
           <h2 class="form__subtitle form__subtitle--add-info">
             <span class="form__subtitle--text">Дополнительно</span>
           </h2>
@@ -156,7 +154,7 @@
           </ul>
         </div>
       </fieldset>
-      <div class="form__footer container">
+      <div class="form__footer container container--form">
         <button class="button form__button" type="submit">Отправить заявку</button>
         <span class="form__note">* — Обязательные поля</span>
       </div>
