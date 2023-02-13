@@ -234,13 +234,71 @@
   }
 
   .form__note {
-    display: block;
-    text-align: center;
-    font-family: "Arial";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: none;
-    color: @black;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    margin-bottom: 82px;
+  }
+
+  .form__top-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin: 0 auto;
+    margin-bottom: 69px;
+  }
+
+  .form__item--cat-description {
+    margin-bottom: 0;
+  }
+
+  .form__item--program-type {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-bottom: 0;
+  }
+
+  .form__item--owner-contacts {
+    margin-bottom: 69px;
+  }
+
+  .form__item--comment {
+    margin-bottom: 67px;
+  }
+
+  .form__item--add-info {
+    margin-bottom: 61px;
+  }
+
+  .form__item--wrapper {
+    margin: 0 auto;
+  }
+
+  .form__owner-contacts-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+
+  .form__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin: 0 auto;
+  }
+
+  .form__button {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .form__note {
+    text-align: left;
   }
 }

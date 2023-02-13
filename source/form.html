@@ -57,18 +57,18 @@
       <p class="page-main__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
     </div>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru">
-      <div class="container container--form">
+      <div class="container container--form form__top-wrapper">
         <fieldset class="form__item form__item--cat-description">
           <h2 class="visually-hidden">Описание питомца:</h2>
-          <div class="form__field field">
+          <div class="form__field field field--cat-description">
             <label class="field__label" for="name">Имя:*</label>
             <input class="field__input" type="text" id="name" name="name" placeholder="Барсик">
           </div>
-          <div class="form__field field">
+          <div class="form__field field field--cat-description">
             <label class="field__label" for="weight">Вес (кг):*</label>
             <input class="field__input" type="text" id="weight" name="weight" placeholder="7">
           </div>
-          <div class="form__field field">
+          <div class="form__field field field--cat-description">
             <label class="field__label" for="age">Возраст (лет):</label>
             <input class="field__input" type="text" id="age" name="age" placeholder="7">
           </div>
@@ -95,32 +95,34 @@
         </fieldset>
       </div>
       <fieldset class="form__item form__item--owner-contacts">
-        <div class="container container--form">
+        <div class="container container--form form__item--wrapper">
           <h2 class="form__subtitle form__subtitle--owner-contacts">
             <span class="form__subtitle--text">Контактные данные&nbsp;<br class="form__subtitle--text-wrap">(владельца
               кота)</span>
           </h2>
-          <div class="form__field field">
-            <label class="field__label" for="email">E-mail:*</label>
-            <input class="field__input field__input--owner-contacts" type="text" id="email" name="email"
-              placeholder="kuklachev@gmail.com">
-            <svg class="field__icon field__icon--mail" width="18" height="13" role="img" aria-label="Иконка почты"
-              focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#mail-icon"></use>
-            </svg>
-          </div>
-          <div class="form__field field">
-            <label class="field__label" for="phone">Телефон:*</label>
-            <input class="field__input field__input--owner-contacts" type="text" id="phone" name="phone"
-              placeholder="8 (960) 900-60-90">
-            <svg class="field__icon field__icon--phone" width="20" height="20" role="img" aria-label="Иконка телефона"
-              focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#phone-icon"></use>
+          <div class="form__owner-contacts-wrapper">
+            <div class="form__field field field--owner-contacts">
+              <label class="field__label" for="email">E-mail:*</label>
+              <input class="field__input field__input--owner-contacts" type="text" id="email" name="email"
+                placeholder="kuklachev@gmail.com">
+              <svg class="field__icon field__icon--mail" width="18" height="13" role="img" aria-label="Иконка почты"
+                focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#mail-icon"></use>
+              </svg>
+            </div>
+            <div class="form__field field field--owner-contacts">
+              <label class="field__label" for="phone">Телефон:*</label>
+              <input class="field__input field__input--owner-contacts" type="text" id="phone" name="phone"
+                placeholder="8 (960) 900-60-90">
+              <svg class="field__icon field__icon--phone" width="20" height="20" role="img" aria-label="Иконка телефона"
+                focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#phone-icon"></use>
+            </div>
           </div>
         </div>
       </fieldset>
       <fieldset class="form__item form__item--comment">
-        <div class="container container--form">
+        <div class="container container--form form__item--wrapper">
           <h2 class="form__subtitle form__subtitle--comment">
             <span class="form__subtitle--text">Комментарий</span>
           </h2>
@@ -129,7 +131,7 @@
         </div>
       </fieldset>
       <fieldset class="form__item form__item--add-info">
-        <div class="container container--form">
+        <div class="container container--form form__item--wrapper">
           <h2 class="form__subtitle form__subtitle--add-info">
             <span class="form__subtitle--text">Дополнительно</span>
           </h2>

@@ -5,7 +5,11 @@
   align-items: center;
 }
 
-.field:not(:last-child) {
+.field--cat-description:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.field--owner-contacts:not(:last-child) {
   margin-bottom: 14px;
 }
 
@@ -68,7 +72,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .field:not(:last-child) {
+  .field--cat-description:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .field--owner-contacts:not(:last-child) {
     margin-bottom: 20px;
   }
 
@@ -93,5 +101,11 @@
   .field__icon--phone {
     top: 16px;
     right: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field--owner-contacts:not(:last-child) {
+    margin-bottom: 0;
   }
 }

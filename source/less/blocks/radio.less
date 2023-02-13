@@ -24,16 +24,19 @@
   content: "";
 }
 
-.radio__input:checked + .radio__label::after {
+.radio__input:checked + .radio__label::before {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 14px;
-  height: 14px;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 8px solid @white;
   background-color: @green;
   border-radius: 50%;
   content: "";
 }
+
+
 
 @media (min-width: @tablet-width) {
   .radio__label {
@@ -46,10 +49,9 @@
     height: 40px;
   }
 
-  .radio__input:checked + .radio__label::after {
-    top: 11px;
-    left: 11px;
-    width: 18px;
-    height: 18px;
+  .radio__input:checked + .radio__label::before {
+    width: 40px;
+    height: 40px;
+    border: 11px solid @white;
   }
 }
