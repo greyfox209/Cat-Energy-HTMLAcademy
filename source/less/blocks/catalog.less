@@ -1,0 +1,28 @@
+.catalog {
+  border-bottom: 1px solid @light-grey-600;
+  margin-bottom: 25px;
+}
+
+.catalog__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr min-content;
+  row-gap: 13px;
+  padding-top: 19px;
+  padding-bottom: 25px;
+}
+
+.catalog__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.catalog__button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
