@@ -17,6 +17,43 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  width: 140px;
+  height: 112px;
+}
+
+.catalog__image--small {
+  width: 68px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+.catalog__image--big {
+  width: 84px;
+  height: auto;
+}
+
+.catalog__subtitle {
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @dark-grey-200;
+}
+
+.catalog__table {
+  min-width: 140px;
+  font-size: 12px;
+  line-height: 14px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: @dark-grey-100;
+}
+
+.catalog__table-value {
+  text-align: right;
 }
 
 .catalog__button {
@@ -25,4 +62,86 @@
   padding: 10px 10px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.catalog__show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 0;
+  padding-top: 25px;
+}
+
+.catalog__show-all-opener-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 23px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog__show-all-opener-button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/show-all.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.catalog__show-all-subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @dark-grey-300;
+}
+
+.catalog__show-all-description {
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 16px;
+  color: @dark-grey-100;
+}
+
+.catalog__show-all-button {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: @light-grey;
+  color: @dark-grey-100;
+}
+
+@media (max-width: @mobile-width) {
+  .catalog__item::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    border-top: 1px solid @light-grey-200;
+    content: "";
+  }
+
+  .catalog__text-wrap--tablet {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__text-wrap--mobile {
+    display: none;
+  }
+
+  .catalog__text-wrap--tablet {
+    display: block;
+  }
 }
