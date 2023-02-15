@@ -1,0 +1,142 @@
+.extra {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.extra::before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 2px solid @green;
+  z-index: -1;
+  content: "";
+}
+
+.extra__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.extra__title--text {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.extra__title--text::before {
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  height: 100%;
+  background-color: @white;
+  z-index: -1;
+  content: "";
+}
+
+.extra__list {
+  position: relative;
+  margin-bottom: 39px;
+}
+
+.extra__list::before {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid @light-grey-700;
+  content: "";
+}
+
+.extra__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  padding-bottom: 18px;
+}
+
+.extra__item::before {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  border-top: 1px solid @light-grey-700;
+  content: "";
+}
+
+.extra__subtitle {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @dark-grey-200;
+}
+
+.extra__table {
+  width: 100%;
+  margin-bottom: 15px;
+  line-height: 14px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: @dark-grey-100;
+}
+
+.catalog__extra-attribute {
+  padding: 0;
+}
+
+.catalog__extra-value {
+  padding: 0;
+  text-align: right;
+}
+
+.extra__button {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.extra__promo {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 289px;
+  padding-top: 186px;
+  padding-bottom: 43px;
+  padding-left: 58px;
+  padding-right: 58px;
+  background-image: url("../img/gift-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+}
+
+.extra__promo::before {
+  position: absolute;
+  top: 58px;
+  left: calc(50% - 40px);
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/gift-icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.extra__promo-text {
+  width: 161px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+}

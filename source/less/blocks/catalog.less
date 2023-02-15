@@ -85,12 +85,21 @@
 
 .catalog__show-all-opener-button::before {
   position: absolute;
-  top: 0;
+  top: calc(50% - 1px);
   left: 0;
   width: 30px;
+  height: 2px;
+  border-top: 2px solid @light-grey-500;
+  content: "";
+}
+
+.catalog__show-all-opener-button::after {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  width: 2px;
   height: 30px;
-  background-image: url("../img/show-all.svg");
-  background-repeat: no-repeat;
+  border-left: 2px solid @light-grey-500;
   content: "";
 }
 
