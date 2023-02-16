@@ -47,8 +47,8 @@
 .extra__list::before {
   position: absolute;
   bottom: 0;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid @light-grey-700;
   content: "";
 }
@@ -64,8 +64,8 @@
 .extra__item::before {
   position: absolute;
   top: 0;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   border-top: 1px solid @light-grey-700;
   content: "";
 }
@@ -139,4 +139,104 @@
   font-size: 16px;
   line-height: 20px;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    margin-bottom: 76px;
+  }
+
+  .extra::before {
+    top: 22px;
+  }
+
+  .extra__title {
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra__title--text::before {
+    left: -40px;
+    right: -40px;
+  }
+
+  .extra__wrapper {
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  .extra__list {
+    margin-bottom: 69px;
+  }
+
+  .extra__list::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid @light-grey-700;
+  }
+
+  .extra__item {
+    padding-top: 26px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .extra__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  .extra__subtitle {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__table {
+    flex: 1 1 auto;
+    width: auto;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog__extra-attribute {
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  .catalog__extra-value {
+    width: 90px;
+  }
+
+  .extra__promo {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 200px;
+    padding-top: 71px;
+    padding-bottom: 69px;
+    padding-right: 124px;
+    background-image: url("../img/gift-background-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: cover;
+  }
+
+  .extra__promo::before {
+    top: 57px;
+    left: 78px;
+    width: 80px;
+    height: 83px;
+  }
+
+  .extra__promo-text {
+    margin: 0;
+    text-align: left;
+  }
 }
