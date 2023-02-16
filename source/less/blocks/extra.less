@@ -161,21 +161,13 @@
     right: -40px;
   }
 
-  .extra__wrapper {
+  .extra__wrapper--tablet {
     max-width: 708px;
     margin: 0 auto;
   }
 
   .extra__list {
     margin-bottom: 69px;
-  }
-
-  .extra__list::before {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 1px solid @light-grey-700;
   }
 
   .extra__item {
@@ -238,5 +230,95 @@
   .extra__promo-text {
     margin: 0;
     text-align: left;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .extra__list::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid @light-grey-700;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    margin-bottom: 86px;
+  }
+
+  .extra__wrapper--desktop {
+    margin: 0 auto;
+  }
+
+  .extra__wrapper--tablet {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin: 0 auto;
+    column-gap: 80px;
+  }
+
+  .extra__list {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
+  .extra__item {
+    flex-direction: row;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .extra__card {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
+  .extra__subtitle {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__table {
+    flex: 0 0 288px;
+    margin-right: 40px;
+  }
+
+  .catalog__extra-attribute {
+    text-align: left;
+  }
+
+  .catalog__extra-value {
+    width: 44px;
+    text-align: left;
+  }
+
+  .extra__button {
+    width: 245px;
+  }
+
+  .extra__promo {
+    flex-direction: column;
+    max-width: 245px;
+    min-height: 289px;
+    padding-top: 0;
+    padding-bottom: 42px;
+    padding-right: 42px;
+    padding-left: 42px;
+    background-image: url("../img/gift-background-desktop.jpg");
+  }
+
+  .extra__promo::before {
+    top: 56px;
+    left: calc(50% - 40px);
+  }
+
+  .extra__promo-text {
+    text-align: center;
   }
 }

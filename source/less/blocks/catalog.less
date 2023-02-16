@@ -296,7 +296,7 @@
     align-self: center;
     width: 60px;
     height: 60px;
-    margin-top: 79px;
+    margin-top: 77px;
     margin-bottom: 49px;
   }
 
@@ -318,5 +318,46 @@
     margin-bottom: 87px;
     font-size: 16px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    max-width: 1220px;
+    margin-bottom: 75px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+
+  .catalog__item {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .catalog__image-container {
+    margin-bottom: 46px;
+  }
+
+  .catalog__subtitle {
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .catalog__table-attribute {
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+
+  .catalog__table-value {
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    text-align: right;
   }
 }
