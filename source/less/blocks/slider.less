@@ -52,6 +52,7 @@
 }
 
 .slider__button {
+  position: relative;
   padding: 10px 16px;
   text-align: center;
   text-transform: uppercase;
@@ -62,6 +63,27 @@
   background-color: transparent;
   color: @black;
   cursor: pointer;
+}
+
+.slider__button::before {
+  position: absolute;
+  bottom: 10px;
+  left: 18px;
+  width: calc(-37px + 100%);
+  border-bottom: 1px dotted @black;
+  opacity: 40%;
+  content: "";
+  transition: all .3s ease-out;
+}
+
+.slider__button:hover::before {
+  border-bottom: 1px solid @black;
+  transition: all .3s ease-out;
+}
+
+.slider__button:active::before {
+  display: none;
+  transition: all .3s ease-out;
 }
 
 @media (min-width: @tablet-width) {

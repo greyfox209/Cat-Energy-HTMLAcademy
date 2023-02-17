@@ -84,6 +84,8 @@
 }
 
 .product-series__link {
+  position: relative;
+  display: inline-block;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -92,8 +94,30 @@
   color: @black;
 }
 
+.product-series__link::before {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(1px + 100%);
+  width: 24px;
+  height: 12px;
+  background-image: url("../img/arrow-short.svg");
+  background-repeat: no-repeat;
+  transition: all .3s ease-out;
+  content: "";
+}
+
 .product-series__link span {
   margin-right: 15px;
+}
+
+.product-series__link:hover {
+  opacity: 60%;
+  transition: all .3s ease-out;
+}
+
+.product-series__link:active {
+  opacity: 30%;
+  transition: all .3s ease-out;
 }
 
 @media (min-width: @tablet-width) {

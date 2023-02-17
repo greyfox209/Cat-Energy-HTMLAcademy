@@ -58,6 +58,18 @@
   height: 20px;
 }
 
+.field__input:hover {
+  outline: 1px solid @light-grey-700;
+  outline-offset: -1px;
+  transition: all .3s ease-in-out;
+}
+
+.field__input:focus {
+  outline: 2px solid @dark-grey-100;
+  outline-offset: -2px;
+  transition: all .1s ease-out;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */
   color:    @dark-grey-100;
 }

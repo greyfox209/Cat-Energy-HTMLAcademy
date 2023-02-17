@@ -141,6 +141,17 @@
   color: @black;
 }
 
+.form__button:hover {
+  background-color: @dark-green;
+  transition: all .3s ease-out;
+}
+
+.form__button:active {
+  background-color: @dark-green;
+  color: rgba(@white, 0.3);
+  transition: all .3s ease-out;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     margin-bottom: 72px;
