@@ -141,6 +141,18 @@
   color: @black;
 }
 
+.form__textarea:hover {
+  outline: 1px solid @light-grey-700;
+  outline-offset: -1px;
+  transition: all .3s ease-in-out;
+}
+
+.form__textarea:focus {
+  outline: 2px solid @dark-grey-100;
+  outline-offset: -2px;
+  transition: all .1s ease-out;
+}
+
 .form__button:hover {
   background-color: @dark-green;
   transition: all .3s ease-out;

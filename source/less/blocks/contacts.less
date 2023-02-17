@@ -33,6 +33,30 @@
   color: @dark-grey-100;
 }
 
+.contacts__copyright-icon {
+  fill: @dark-grey;
+}
+
+.contacts__logo:hover {
+  opacity: 80%;
+  transition: all .3s ease-out;
+}
+
+.contacts__logo:active {
+  opacity: 60%;
+  transition: all .3s ease-out;
+}
+
+.contacts__copyright:hover .contacts__copyright-icon {
+  fill: @green;
+  transition: all .3s ease-out;
+}
+
+.contacts__copyright:focus {
+  opacity: 30%;
+  transition: all .1s ease-out;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     flex-direction: row;

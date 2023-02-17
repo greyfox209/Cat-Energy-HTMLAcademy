@@ -49,6 +49,7 @@
   right: 15px;
   width: 18px;
   height: 13px;
+  stroke: @dark-grey-200;
 }
 
 .field__icon--phone {
@@ -56,6 +57,7 @@
   right: 13px;
   width: 20px;
   height: 20px;
+  fill: @dark-grey-200;
 }
 
 .field__input:hover {
@@ -67,6 +69,16 @@
 .field__input:focus {
   outline: 2px solid @dark-grey-100;
   outline-offset: -2px;
+  transition: all .1s ease-out;
+}
+
+.field__input:focus + .field__icon--mail {
+  stroke: @green;
+  transition: all .1s ease-out;
+}
+
+.field__input:focus + .field__icon--phone {
+  fill: @green;
   transition: all .1s ease-out;
 }
 

@@ -14,19 +14,36 @@
 .social-list__icon--vkontakte {
   width: 23px;
   height: 16px;
-  fill: @light-grey;
+  fill: @dark-grey;
 }
 
 .social-list__icon--instagram {
   width: 16px;
   height: 16px;
-  fill: @light-grey;
+  fill: @dark-grey;
 }
 
 .social-list__icon--facebook {
   width: 22px;
   height: 22px;
+  stroke: @dark-grey;
   fill: @light-grey;
+}
+
+.social-list__link:hover .social-list__icon--vkontakte,
+.social-list__link:hover .social-list__icon--instagram {
+  fill: @green;
+  transition: all .3s ease-out;
+}
+
+.social-list__link:hover .social-list__icon--facebook {
+  stroke: @green;
+  transition: all .3s ease-out;
+}
+
+.social-list__link:focus .social-list__icon {
+  opacity: 30%;
+  transition: all .1s ease-out;
 }
 
 @media (min-width: @tablet-width) {
