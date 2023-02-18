@@ -164,6 +164,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
+    sprite,
     createWebp
   ),
 );
