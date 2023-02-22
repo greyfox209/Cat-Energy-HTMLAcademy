@@ -1570,6 +1570,12 @@ fieldset {
   outline: 1px solid #E7E7E7;
   outline-offset: -1px;
 }
+@-moz-document url-prefix() {
+  .field__input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
 .field__input--owner-contacts {
   padding-right: 50px;
 }
@@ -1618,15 +1624,11 @@ fieldset {
   /* Mozilla Firefox 4 to 18 */
   color: #444444;
   opacity: 1;
-  padding-top: 11px;
-  padding-bottom: 11px;
 }
 .field__input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #444444;
   opacity: 1;
-  padding-top: 11px;
-  padding-bottom: 11px;
 }
 .field__input:-ms-input-placeholder {
   /* Internet Explorer 10+ */
