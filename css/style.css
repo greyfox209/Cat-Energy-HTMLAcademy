@@ -1612,24 +1612,20 @@ fieldset {
 }
 .field__input::-webkit-input-placeholder {
   /* WebKit browsers */
-  font-size: 16px;
   color: #444444;
 }
 .field__input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  font-size: 16px;
   color: #444444;
   opacity: 1;
 }
 .field__input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  font-size: 16px;
   color: #444444;
   opacity: 1;
 }
 .field__input:-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  font-size: 16px;
   color: #444444;
 }
 @media (min-width: 768px) {
@@ -1649,22 +1645,6 @@ fieldset {
     padding-right: 17px;
     font-size: 20px;
     line-height: 30px;
-  }
-  .field__input::-webkit-input-placeholder {
-    /* WebKit browsers */
-    font-size: 20px;
-  }
-  .field__input:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    font-size: 20px;
-  }
-  .field__input::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    font-size: 20px;
-  }
-  .field__input:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    font-size: 20px;
   }
   .field__icon--mail {
     top: 19px;
