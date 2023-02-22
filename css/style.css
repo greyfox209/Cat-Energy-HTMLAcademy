@@ -1570,6 +1570,12 @@ fieldset {
   outline: 1px solid #E7E7E7;
   outline-offset: -1px;
 }
+@-moz-document url-prefix() {
+  .field__input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
 .field__input--owner-contacts {
   padding-right: 50px;
 }
