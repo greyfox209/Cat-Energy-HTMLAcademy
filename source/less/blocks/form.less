@@ -164,6 +164,24 @@
   transition: all .3s ease-out;
 }
 
+.form__textarea::-webkit-input-placeholder { /* WebKit browsers */
+  color: @dark-grey-100;
+}
+
+.form__textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: @dark-grey-100;
+  opacity: 1;
+}
+
+.form__textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: @dark-grey-100;
+  opacity: 1;
+}
+
+.form__textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: @dark-grey-100;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     margin-bottom: 72px;

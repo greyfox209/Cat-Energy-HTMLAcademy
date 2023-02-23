@@ -44,7 +44,7 @@
   .main-nav__toggle {
     position: absolute;
     justify-self: end;
-    width: 38px;
+    width: 24px;
     height: 38px;
     background-color: @white;
     border: 0;
@@ -53,8 +53,8 @@
 
   .main-nav--closed .main-nav__toggle::before {
     position: absolute;
-    top: calc(50% + 1px);
-    left: calc(50% - 5px);
+    top: calc(50% - 1px);
+    right: 0;
     width: 24px;
     height: 2px;
     background-color: @black;
@@ -70,8 +70,8 @@
   .main-nav--opened .main-nav__toggle::before,
   .main-nav--opened .main-nav__toggle::after {
     position: absolute;
-    top: calc(50% + 1px);
-    left: calc(50% - 5px);
+    top: calc(50% - 1px);
+    right: 0;
     width: 24px;
     height: 2px;
     background-color: @black;
@@ -102,6 +102,15 @@
   .main-nav__item::before {
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid @light-grey-300;
+    content: "";
+  }
+
+  .main-nav__item:last-child:after {
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
     border-top: 1px solid @light-grey-300;
