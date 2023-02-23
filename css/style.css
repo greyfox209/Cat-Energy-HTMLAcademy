@@ -24,6 +24,8 @@ img {
 }
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 link {
   box-sizing: border-box;
@@ -115,6 +117,8 @@ fieldset {
   background-color: #68B738;
   color: #ffffff;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .page-header {
   display: grid;
@@ -135,14 +139,13 @@ fieldset {
   margin-right: 4px;
 }
 .page-header__logo--image {
-  width: 33px;
+  width: 38px;
   height: 38px;
 }
 .page-header__logo--text {
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
-  margin-top: 4px;
 }
 .page-header__logo:hover {
   opacity: 80%;
@@ -225,7 +228,7 @@ fieldset {
   .main-nav__toggle {
     position: absolute;
     justify-self: end;
-    width: 38px;
+    width: 24px;
     height: 38px;
     background-color: #ffffff;
     border: 0;
@@ -233,8 +236,8 @@ fieldset {
   }
   .main-nav--closed .main-nav__toggle::before {
     position: absolute;
-    top: calc(50% + 1px);
-    left: calc(50% - 5px);
+    top: calc(50% - 1px);
+    right: 0;
     width: 24px;
     height: 2px;
     background-color: #000000;
@@ -248,8 +251,8 @@ fieldset {
   .main-nav--opened .main-nav__toggle::before,
   .main-nav--opened .main-nav__toggle::after {
     position: absolute;
-    top: calc(50% + 1px);
-    left: calc(50% - 5px);
+    top: calc(50% - 1px);
+    right: 0;
     width: 24px;
     height: 2px;
     background-color: #000000;
@@ -275,6 +278,14 @@ fieldset {
   .main-nav__item::before {
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #E6E6E6;
+    content: "";
+  }
+  .main-nav__item:last-child:after {
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
     border-top: 1px solid #E6E6E6;
@@ -1404,6 +1415,24 @@ fieldset {
   color: rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease-out;
 }
+.form__textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #444444;
+}
+.form__textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #444444;
+  opacity: 1;
+}
+.form__textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #444444;
+  opacity: 1;
+}
+.form__textarea:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #444444;
+}
 @media (min-width: 768px) {
   .form {
     margin-bottom: 72px;
@@ -1677,6 +1706,8 @@ fieldset {
   padding-left: 45px;
   color: #222222;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .radio__label::before {
   position: absolute;
@@ -1734,6 +1765,8 @@ fieldset {
   padding-left: 46px;
   color: #000000;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .checkbox__label::before {
   position: absolute;
