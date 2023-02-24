@@ -2071,15 +2071,6 @@ fieldset {
   .catalog__table-row {
     position: relative;
   }
-  .catalog__table-row::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-bottom: 1px solid #CDCDCD;
-    content: "";
-  }
   .catalog__table-attribute {
     padding: 0;
     padding-top: 7px;
