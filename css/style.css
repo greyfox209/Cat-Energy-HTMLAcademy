@@ -1683,11 +1683,11 @@ fieldset {
     line-height: 30px;
   }
   .field__icon--mail {
-    top: 19px;
+    top: calc(50% - 6.5px);
     right: 19px;
   }
   .field__icon--phone {
-    top: 16px;
+    top: calc(50% - 10px);
     right: 17px;
   }
 }
@@ -1748,6 +1748,7 @@ fieldset {
   .radio__label::before {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
   }
   .radio__input:checked + .radio__label::before {
     width: 40px;
