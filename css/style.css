@@ -1973,6 +1973,14 @@ fieldset {
   transition: all 0.3s ease-out;
 }
 @media (max-width: 767px) {
+  .catalog__item::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    border-top: 1px solid #EBEBEB;
+    content: "";
+  }
   .catalog__text-wrap--tablet {
     display: none;
   }
@@ -2069,17 +2077,17 @@ fieldset {
     font-size: 16px;
   }
   .catalog__table-row {
-    position: relative;
+    border-bottom: 1px solid #CDCDCD;
   }
   .catalog__table-attribute {
     padding: 0;
     padding-top: 7px;
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
   .catalog__table-value {
     padding: 0;
     padding-top: 7px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     text-align: right;
   }
   .catalog__show-all {
