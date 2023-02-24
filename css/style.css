@@ -111,6 +111,7 @@ fieldset {
   text-align: center;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   border: 0;
@@ -1972,14 +1973,6 @@ fieldset {
   transition: all 0.3s ease-out;
 }
 @media (max-width: 767px) {
-  .catalog__item::before {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    right: -20px;
-    border-top: 1px solid #EBEBEB;
-    content: "";
-  }
   .catalog__text-wrap--tablet {
     display: none;
   }
