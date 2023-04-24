@@ -1,21 +1,61 @@
 const map = L.map('map')
   .setView({
-    lat: 59.93875424509649,
-    lng: 30.320078028328375,
+    lat: 59.938764863222225,
+    lng: 30.323041135556245,
   }, 17);
 
-L.tileLayer(
+const layer = L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
-     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   },
 ).addTo(map);
 
-const marker = L.marker(
+const mainPinIcon = L.icon({
+  iconUrl: 'img/map-pin-tablet.png',
+  iconSize: [112, 106],
+  iconAnchor: [56, 106],
+});
+
+const mainPinMarker = L.marker(
   {
     lat: 59.938764863222225,
     lng: 30.323041135556245,
   },
+  {
+    icon: mainPinIcon,
+  },
 );
 
-marker.addTo(map);
+mainPinMarker.addTo(map);
+
+const mapDesktop = L.map('map-desktop')
+  .setView({
+    lat: 59.93886158213093,
+    lng: 30.321169851325223,
+  }, 17);
+
+const layerDesktop = L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+).addTo(mapDesktop);
+
+const mainPinIconDesktop = L.icon({
+  iconUrl: 'img/map-pin-tablet.png',
+  iconSize: [112, 106],
+  iconAnchor: [56, 106],
+});
+
+const mainPinMarkerDesktop = L.marker(
+  {
+    lat: 59.938764863222225,
+    lng: 30.323041135556245,
+  },
+  {
+    icon: mainPinIconDesktop,
+  },
+);
+
+mainPinMarkerDesktop.addTo(mapDesktop);
