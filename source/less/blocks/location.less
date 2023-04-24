@@ -33,7 +33,7 @@
   position: relative;
 }
 
-.location__map--google {
+.location__map--leaflet {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,7 +84,7 @@
     margin-top: 20px;
   }
 
-  .location__map--google {
+  .location__map--leaflet {
     height: 400px;
   }
 
@@ -95,13 +95,23 @@
 
 @media (min-width: @desktop-width) {
   .location__text-block {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    max-width: 404px;
     padding-top: 62px;
     padding-bottom: 59px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 76px;
+    padding-right: 90px;
+    background-color: @white;
+    z-index: 1;
   }
 
   .location__address {
     text-align: left;
+  }
+
+  .location__map--leaflet {
+    z-index: 0;
   }
 }
