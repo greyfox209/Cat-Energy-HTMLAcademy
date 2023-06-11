@@ -17,6 +17,8 @@
   <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
   <link rel="preload" href="/fonts/oswaldmedium.woff" as="font">
   <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 </head>
 
 <body class="page__body page__body--wrapper">
@@ -443,17 +445,14 @@
       <h2 class="visually-hidden">Адрес Cat Energy</h2>
       <div class="location__wrapper container">
         <div class="location__text-block">
-          <p class="location__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <p class="location__title">Приглашаем <br class="location__text-wrap">к сотрудничеству дилеров!</p>
+          <address class="location__address">ул. Большая Конюшенная, д. 19/8 <span
+              class="location__address--city">Санкт-Петербург</span></address>
         </div>
       </div>
       <div class="location__map">
-        <div class="location__map--google">
-          <iframe class="location__map--link"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858716006118!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skg!4v1676636539072!5m2!1sru!2skg"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <div class="location__map--leaflet" id="map" height="450"></div>
+        <div class="location__map--leaflet-desktop" id="map-desktop" height="450"></div>
         <div class="location__map--backup-image">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)"
@@ -518,6 +517,9 @@
   </footer>
 
   <script src="js/navigation.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="js/map.js"></script>
 
 </body>
 
