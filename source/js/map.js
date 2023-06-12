@@ -29,11 +29,12 @@ const mainPinMarker = L.marker(
 
 mainPinMarker.addTo(map);
 
-const mapDesktop = L.map('map-desktop')
-  .setView({
-    lat: 59.93886158213093,
-    lng: 30.321169851325223,
-  }, 17);
+const mapDesktop = L.map('map-desktop', {
+  scrollWheelZoom: false,
+}).setView({
+  lat: 59.93886158213093,
+  lng: 30.321169851325223,
+}, 17);
 
 const layerDesktop = L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',

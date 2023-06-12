@@ -14,3 +14,16 @@ btnSlideAfter.addEventListener ('click', function (evt) {
   slideAfter.classList.remove('visually-hidden');
   slideBefore.classList.add('visually-hidden');
 })
+
+//Слайдер
+
+/* global noUiSlider:readonly */
+const sliderElement = document.querySelector('.slider__scale');
+
+noUiSlider.create(sliderElement, {
+    range: {
+        min: 0,
+        max: 100,
+    },
+    start: 50,
+});
