@@ -1,8 +1,12 @@
 /* global noUiSlider:readonly */
 
 const sliderElement = document.querySelector('.slider__scale');
+
 const beforeItem = document.querySelector('.slider__item--before');
 const afterItem = document.querySelector('.slider__item--after');
+
+const btnSlideBefore = document.querySelector('.slider__button--before');
+const btnSlideAfter = document.querySelector('.slider__button--after');
 
 noUiSlider.create(sliderElement, {
   range: {
@@ -21,22 +25,17 @@ sliderElement.noUiSlider.on('update', function (values, handle) {
   beforeItem.style.width = widthBefore;
 });
 
-const slideBefore = document.querySelector('.slider__item--before');
-const slideAfter = document.querySelector('.slider__item--after');
-const btnSlideBefore = document.querySelector('.slider__button--before');
-const btnSlideAfter = document.querySelector('.slider__button--after');
-
 btnSlideBefore.addEventListener('click', function (evt) {
   evt.preventDefault();
-  slideBefore.style.width = '100%';
-  slideAfter.style.width = '0%';
+  beforeItem.style.width = '100%';
+  afterItem.style.width = '0%';
   sliderElement.noUiSlider.set(0);
 });
 
 btnSlideAfter.addEventListener('click', function (evt) {
   evt.preventDefault();
-  slideBefore.style.width = '0%';
-  slideAfter.style.width = '100%';
+  beforeItem.style.width = '0%';
+  afterItem.style.width = '100%';
   sliderElement.noUiSlider.set(100);
 });
 
