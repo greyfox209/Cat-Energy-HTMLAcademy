@@ -53,6 +53,7 @@
   width: 251px;
   height: 240px;
   background-image: url("../img/cat-example-after-mobile.png");
+  background-size: 95%;
   background-repeat: no-repeat;
   content: "";
 }
@@ -64,13 +65,32 @@
   width: 280px;
 }
 
-.slider__scale {
+.slider__scale.noUi-target {
   width: 84px;
+  height: 15px;
+  margin-top: 2px;
+  padding: 0 22px;
+  border: 1px solid @light-grey-700;
+  border-radius: 7px;
+  background-color: @white;
+}
+
+.slider__scale.noUi-horizontal .noUi-handle {
+  top: 5px;
+  width: 34px;
   height: 4px;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 4px;
-  background-color: @light-grey-slider;
+  border: 0;
+  border-radius: 3px;
+  background-color: @green;
+  box-shadow: none;
+}
+
+.slider__scale.noUi-horizontal .noUi-handle::before {
+  display: none;
+}
+
+.slider__scale.noUi-horizontal .noUi-handle::after {
+  display: none;
 }
 
 .slider__button {
@@ -120,30 +140,54 @@
 
   .slider__item--before::before {
     top: 0;
-    left: 70px;
+    left: 44px;
     width: 659px;
     height: 536px;
     background-image: url("../img/cat-example-before-tablet.png");
   }
 
   .slider__item--after::before {
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: -16px;
     width: 708px;
     height: 541px;
     background-image: url("../img/cat-example-after-tablet.png");
+    background-size: 95%;
   }
 
   .slider__control {
     width: 708px;
   }
 
-  .slider__scale {
+  .slider__scale.noUi-target {
     width: 428px;
     height: 6px;
     margin-left: 14px;
     margin-right: 14px;
+    padding: 0;
     border-radius: 6px;
+    border: 0;
+    background-color: @light-grey-slider;
+  }
+
+  .slider__scale.noUi-horizontal .noUi-handle {
+    top: -12px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid @light-grey-700;
+    border-radius: 50%;
+    background-color: @white;
+  }
+
+  .slider__scale.noUi-horizontal .noUi-handle::before {
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @green;
   }
 
   .slider__button {
@@ -162,7 +206,7 @@
   .slider__control {
     justify-content: flex-end;
 
-    width: 630px;
+    width: 640px;
   }
 
   .slider__item--before::before {
