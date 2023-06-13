@@ -30,8 +30,8 @@ noUiSlider.create(sliderElement, {
 // Обновление ширины элементов слайдера при изменении значения
 sliderElement.noUiSlider.on('update', function (values, handle) {
   const currentValue = parseFloat(values[handle]);
-  const widthAfter = 100 - currentValue + '%';
-  const widthBefore = currentValue + '%';
+  const widthAfter = currentValue + '%';
+  const widthBefore = 100 - currentValue + '%';
 
   afterItem.style.width = widthAfter;
   beforeItem.style.width = widthBefore;
