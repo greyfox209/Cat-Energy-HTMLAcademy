@@ -1,33 +1,33 @@
 /* global noUiSlider:readonly */
 
-/* global noUiSlider:readonly */
-
 const sliderElement = document.querySelector('.slider__scale');
 const beforeItem = document.querySelector('.slider__item--before');
 const afterItem = document.querySelector('.slider__item--after');
 const btnSlideBefore = document.querySelector('.slider__button--before');
 const btnSlideAfter = document.querySelector('.slider__button--after');
-let startValue = 50; // Значение по умолчанию
 
-// Функция для обновления значения стартового значения в зависимости от ширины вьюпорта
-function updateStartValue() {
-  if (window.innerWidth < 768) {
-    startValue = 0;
-  } else {
-    startValue = 50;
-  }
-}
+let startValue = 50;
 
-// Создание слайдера с динамическим стартовым значением
 noUiSlider.create(sliderElement, {
   range: {
     min: 0,
     max: 100,
   },
-  start: startValue, // Использование динамического стартового значения
+  start: startValue,
 });
 
-// Обновление ширины элементов слайдера при изменении значения
+function setSliderWidth() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 768) {
+    startValue = 0;
+  } else {
+    startValue = 50;
+  }
+
+  sliderElement.noUiSlider.set(startValue);
+}
+
 sliderElement.noUiSlider.on('update', function (values, handle) {
   const currentValue = parseFloat(values[handle]);
   const widthAfter = currentValue + '%';
@@ -37,7 +37,6 @@ sliderElement.noUiSlider.on('update', function (values, handle) {
   beforeItem.style.width = widthBefore;
 });
 
-// Обработчик события для кнопки "Перед"
 btnSlideBefore.addEventListener('click', function (evt) {
   evt.preventDefault();
   beforeItem.style.width = '100%';
@@ -45,7 +44,6 @@ btnSlideBefore.addEventListener('click', function (evt) {
   sliderElement.noUiSlider.set(0);
 });
 
-// Обработчик события для кнопки "После"
 btnSlideAfter.addEventListener('click', function (evt) {
   evt.preventDefault();
   beforeItem.style.width = '0%';
@@ -53,10 +51,10 @@ btnSlideAfter.addEventListener('click', function (evt) {
   sliderElement.noUiSlider.set(100);
 });
 
-// Обновление стартового значения при изменении размера вьюпорта
-window.addEventListener('resize', updateStartValue);
-updateStartValue(); // Вызов функции при загрузке страницы
+setSliderWidth();
 
+
+window.addEventListener('resize', setSliderWidth);
 
 
 /*
