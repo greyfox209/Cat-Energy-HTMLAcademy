@@ -1,8 +1,9 @@
-const map = L.map('map')
-  .setView({
-    lat: 59.938764863222225,
-    lng: 30.323041135556245,
-  }, 17);
+const map = L.map('map', {
+  scrollWheelZoom: false, // Отключаем масштабирование при скроллинге
+}).setView({
+  lat: 59.938764863222225,
+  lng: 30.323041135556245,
+}, 17);
 
 const layer = L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
