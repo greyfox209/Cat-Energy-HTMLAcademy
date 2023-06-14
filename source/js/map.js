@@ -61,20 +61,3 @@ const mainPinMarkerDesktop = L.marker(
 );
 
 mainPinMarkerDesktop.addTo(mapDesktop);
-
-// Отключаем увеличение карты при скроллинге в мобильной версии
-if (window.innerWidth < 768) {
-  map.touchZoom.disable();
-  map.on('touchstart', function (e) {
-    if (e.touches.length === 2) {
-      e.preventDefault();
-    }
-  });
-
-  mapDesktop.touchZoom.disable();
-  mapDesktop.on('touchstart', function (e) {
-    if (e.touches.length === 2) {
-      e.preventDefault();
-    }
-  });
-}
